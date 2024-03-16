@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../src/turkish-sunset.png);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  padding: 20px; /* Añadido para mejorar la legibilidad del contenido en dispositivos móviles */
+}
+
+main {
+  border-radius: 18px;
+  background-color: rgba(95, 105, 155, 0.3); /* Reducido el nivel de opacidad */
+  backdrop-filter: blur(9px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 80vw; /* Cambiado de min a max para un mejor ajuste en dispositivos grandes */
+  width: 100%;
+  min-height: 70vh; /* Ajuste del alto mínimo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 16px;
+}
+
+h2 {
+  font-size: 2rem; /* Modificado para un tamaño más adecuado en dispositivos móviles */
+  margin-bottom: 20px; /* Espaciado inferior añadido */
+  text-align: center;
+}
+
+
+#modalStatus{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+button {
+  height: 3.1rem;
+  width: 100%;
+  font-size: 1.1rem;
+  background-color: #5577cc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 9px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: all 0.3s ease; /* Agregando transición para una animación suave */
+}
+
+button:hover,
+button:focus {
+  filter: none; /* Quitando el desenfoque al pasar el ratón o enfocar */
+}
+
+button:active {
+  transform: translateY(2px); /* Moviendo el botón hacia abajo al hacer clic */
+}
+
+
+input{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 1.1rem; /* Tamaño de fuente ajustado */
+  text-align: center; /* Alineación de texto centrada */
+}
+
+
+main > #ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
