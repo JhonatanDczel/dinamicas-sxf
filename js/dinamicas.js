@@ -1,4 +1,3 @@
-/* Verificar si en el localstorage no hay un dato llamado id, en caso de no haberlo crear uno basado en la hora actual, y en caso de haber, no hacer nada */
 if (localStorage.getItem('id') === null) {
   localStorage.setItem('id', Date.now() % 1000);
 }
@@ -10,46 +9,37 @@ div.textContent = localStorage.getItem('id');
 ticket.appendChild(div);
 const modalStatus = document.getElementById('modalStatus');
 
-// Función para cambiar el nombre a editable
 function makeNameEditable() {
   const nameElement = document.getElementById('name');
   const name = nameElement.textContent;
   
-// Crear un input
 const inputElement = document.createElement('input');
 inputElement.setAttribute('type', 'text');
 inputElement.setAttribute('id', 'nameInput');
-inputElement.setAttribute('pattern', '[0-9]*'); // Esta expresión regular permite solo números
-inputElement.setAttribute('inputmode', 'numeric'); // Esto ayuda a mostrar el teclado numérico en dispositivos móviles
+inputElement.setAttribute('pattern', '[0-9]*'); 
+inputElement.setAttribute('inputmode', 'numeric'); 
 inputElement.value = name;
 
   
-  // Reemplazar el h2 con el input
   nameElement.parentNode.replaceChild(inputElement, nameElement);
   
-  // Enfocar el input
   inputElement.focus();
   
-  // Manejar evento de perder el foco para restaurar el nombre
   inputElement.addEventListener('blur', function() {
     restoreName();
   });
 }
 
-// Función para restaurar el nombre
 function restoreName() {
   const inputElement = document.getElementById('nameInput');
   const name = inputElement.value;
   
-  // Crear de nuevo el h2 con el nombre ingresado
   const nameElement = document.createElement('h2');
   nameElement.setAttribute('id', 'name');
   nameElement.textContent = name;
   
-  // Reemplazar el input con el h2
   inputElement.parentNode.replaceChild(nameElement, inputElement);
   
-  // Volver a asociar el evento de clic al h2
   nameElement.addEventListener('click', makeNameEditable);
 }
 

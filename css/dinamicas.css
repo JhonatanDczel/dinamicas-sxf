@@ -18,17 +18,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
-  padding: 20px; /* Añadido para mejorar la legibilidad del contenido en dispositivos móviles */
+  padding: 20px; 
 }
 
 main {
   border-radius: 18px;
-  background-color: rgba(95, 105, 155, 0.3); /* Reducido el nivel de opacidad */
+  background-color: rgba(95, 105, 155, 0.3);
   backdrop-filter: blur(9px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  max-width: 80vw; /* Cambiado de min a max para un mejor ajuste en dispositivos grandes */
+  max-width: 80vw; 
   width: 100%;
-  min-height: 70vh; /* Ajuste del alto mínimo */
+  min-height: 70vh; 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -37,8 +37,8 @@ main {
 }
 
 h2 {
-  font-size: 2rem; /* Modificado para un tamaño más adecuado en dispositivos móviles */
-  margin-bottom: 20px; /* Espaciado inferior añadido */
+  font-size: 2rem; 
+  margin-bottom: 20px; 
   text-align: center;
 }
 
@@ -60,16 +60,16 @@ button {
   color: #fff;
   font-weight: 700;
   margin-top: 20px;
-  transition: all 0.3s ease; /* Agregando transición para una animación suave */
+  transition: all 0.3s ease;
 }
 
 button:hover,
 button:focus {
-  filter: none; /* Quitando el desenfoque al pasar el ratón o enfocar */
+  filter: none; 
 }
 
 button:active {
-  transform: translateY(2px); /* Moviendo el botón hacia abajo al hacer clic */
+  transform: translateY(2px); 
 }
 
 
@@ -79,8 +79,8 @@ input{
   border-radius: 9px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  font-size: 1.1rem; /* Tamaño de fuente ajustado */
-  text-align: center; /* Alineación de texto centrada */
+  font-size: 1.1rem; 
+  text-align: center; 
 }
 
 

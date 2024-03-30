@@ -21,7 +21,6 @@ app.listen(port, () => {
   console.log(`Servidor escuchando en http://dinamicas:${port}`);
 });
 
-/* crea api para recibir participantes con sus números, lo que se enviara seran dos parametros uno idParticipante y otro llamado numero, estos se agregaran a sorteoActual*/
 app.post('/participante', (req, res) => {
   console.log(req.body.idParticipante, sorteoActual.registros[req.body.idParticipante]);
   if (!(sorteoActual.registros[req.body.idParticipante] == undefined)) {
@@ -31,7 +30,6 @@ app.post('/participante', (req, res) => {
   sorteoActual.addRegistro(req.body.idParticipante, req.body.nombre, req.body.numero, res);
 });
 
-/* crea una api para que los clientes puedan consultar si hay un sorteo vigente o no */ 
 app.get('/sorteo', (req, res) => {
   res.send(sorteoActual !== null);
 });
@@ -62,7 +60,6 @@ function sorteo(id) {
 
 function showData() {
   let ranking = [];
-  // Iterar sobre el objeto de registros
   for (const idParticipante in sorteoActual.registros) {
     if (sorteoActual.registros.hasOwnProperty(idParticipante)) {
       const registro = sorteoActual.registros[idParticipante];
